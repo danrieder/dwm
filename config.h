@@ -1,10 +1,18 @@
 /* See LICENSE file for copyright and license details. */
 /*
  * TODO: 
- *        add patch for togglesticky - done
- *        add patch for window swallowing - done
+ *        patch in scratchpad?
+ *        patch in xrdb?
  *        remove the quit function 
  */
+
+/*
+ *  Patches (in the order applied):
+ *    vanitygaps  adds gaps, gap control, lots of layouts (I have not included all layouts)
+ *    sticky      [Mod+s] toggles a window to persist as you move from tag to tag 
+ *    swallow     swallow spawned window - ex: watch a video with mpv from the command line will replace window that called it
+ *    fullscreen  [Mod+f] toggles a window fullscreen 
+*/
 
 /* Constants 
 #define TERMINAL "st"
@@ -134,6 +142,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Right,  tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = -1 } },
+  { MODKEY,                       XK_f,      fullscreen,     {0} },
   /* tags */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
