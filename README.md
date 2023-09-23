@@ -1,6 +1,8 @@
 # Daniel's dwm build
 
-This build is not complete yet.  
+[dwm](https://dwm.suckless.org/) is a tiling window manager for X by [suckless.org](https://suckless.org/).  
+- dwm is customized through editing its source code, which makes it extremely fast and secure - it does not process any input data which isn't known at compile time, except window titles and status text read from the root window's name. You don't have to learn Lua/sh/ruby or some weird configuration file format (like X resource files), beside C, to customize it for your needs: you only have to learn C (at least in order to edit the header file).
+- Because dwm is customized through editing its source code, it's pointless to make binary packages of it. This keeps its userbase small and elitist. No novices asking stupid questions. There are some distributions that provide binary packages though.  
 
 ## Keybindings:
 
