@@ -134,7 +134,7 @@ static const Key keys[] = {
 	{ MODKEY,			                  XK_s,		   togglesticky,	 {0} }, 
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_space,  zoom,           {0} },
+	{ MODKEY,                       XK_space,  zoom,           {0} },
   { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_Left,   focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_Right,  focusmon,       {.i = +1 } },
@@ -155,6 +155,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+  /* external progs and scripts */
+	{ MODKEY,			XK_F9,		spawn,		{.v = (const char*[]){ "mounter", NULL } } },
+	{ MODKEY,			XK_F10,		spawn,		{.v = (const char*[]){ "unmounter", NULL } } },
 //	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 //	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
 //	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
