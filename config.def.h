@@ -15,10 +15,10 @@
 */
 
 /* Constants 
-#define TERMINAL "st"
-#define TERMCLASS "St"
 #define BROWSER "brave"
 */
+#define TERMINAL "st"
+#define TERMCLASS "St"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -31,8 +31,10 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=12" };
-static const char dmenufont[]       = "monospace:size=12";
+// static const char *fonts[]          = { "monospace:size=12", "fontawesome:size=12" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true", 
+                                        "Font Awesome:size=14" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=14";
 static const char col_gray1[]       = "#1a1b26";
 static const char col_gray2[]       = "#1a1b26";
 static const char col_gray3[]       = "#acb0d0";
@@ -156,6 +158,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
   /* external progs and scripts */
+	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer;") },
 	{ MODKEY,			XK_F9,		spawn,		{.v = (const char*[]){ "mounter", NULL } } },
 	{ MODKEY,			XK_F10,		spawn,		{.v = (const char*[]){ "unmounter", NULL } } },
 //	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
