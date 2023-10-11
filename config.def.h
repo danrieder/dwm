@@ -3,6 +3,7 @@
  * TODO: 
  *        patch in scratchpad?
  *        patch in xrdb?
+ *        patch in actualfullscreen (need to remove fullscreen?)
  *        remove the quit function 
  */
 
